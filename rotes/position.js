@@ -2,9 +2,9 @@ const express = require('express');
 const controller = require('../controllers/position');
 const router = express.Router();
 
-router.get('/', controller.getAll);
-router.get('/:id', controller.getByID);
-router.delete('/:id', controller.remove);
+router.get('/', controller.findAll);
+router.get('/:id', controller.findOne);
+router.delete('/:id', controller.destroy);
 router.post('/', controller.create);
 router.patch('/:id', controller.update);
 
